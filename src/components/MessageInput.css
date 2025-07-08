@@ -1,0 +1,197 @@
+.message-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reply-preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(142, 68, 173, 0.1);
+  border-left: 3px solid var(--accent-color);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.reply-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.reply-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.reply-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cancel-reply {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.cancel-reply:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.emoji-bar {
+  display: flex;
+  gap: 5px;
+  padding: 8px 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.emoji-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.emoji-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.emoji-btn:hover {
+  background-color: var(--border-color);
+}
+
+.message-form {
+  display: flex;
+  align-items: center;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: var(--primary-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 25px;
+  padding: 8px;
+  gap: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.input-group:focus-within {
+  border-color: var(--accent-color);
+}
+
+.attachment-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attachment-btn:hover:not(:disabled) {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.attachment-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.message-input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 16px;
+  padding: 8px 12px;
+  outline: none;
+}
+
+.message-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.send-btn {
+  background-color: var(--accent-color);
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.send-btn:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+  transform: scale(1.05);
+}
+
+.send-btn:disabled {
+  background-color: var(--border-color);
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .emoji-bar {
+    padding: 5px 0;
+  }
+
+  .emoji-btn {
+    font-size: 18px;
+    padding: 3px 6px;
+  }
+
+  .input-group {
+    padding: 6px;
+  }
+
+  .message-input {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .send-btn {
+    min-width: 36px;
+    min-height: 36px;
+    font-size: 16px;
+  }
+
+  .attachment-btn {
+    font-size: 16px;
+    padding: 6px;
+  }
+}
